@@ -27,4 +27,6 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
+      - name: Publish
+        run: dotnet publish dockerdotnetcore.csproj -c Release -o webapp
       
